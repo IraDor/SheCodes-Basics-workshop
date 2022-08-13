@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Running</title>
+    <style>
+      body {
+        display: block;
+        margin: 8px;
+      }
+      .project {
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 95.5%
+        );
+        padding: 30px;
+        margin: 30px auto;
+        border-radius: 2%;
+        width: 50%;
+      }
+      h1 {
+        font-size: 40px;
+        padding: 20px 0px 0px 0px;
+        font-weight: bold;
+        border: 1.5px solid #fff;
+        padding: 20px;
+        border-radius: 4px;
+        text-align: center;
+      }
+      h2 {
+        color: #5e63b6;
+        font-size: 30px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 1%;
+        opacity: 0.8;
+      }
+      p {
+        font-size: 18px;
+        padding: 28px;
+        line-height: 30px;
+        text-align: left;
+      }
+
+      button {
+        margin: 25px auto;
+        display: block;
+        color: #f5c7f7;
+        font-size: 18px;
+        background: #27296d;
+        padding: 16px 30px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        transition: all 50ms ease-in-out;
+        border: 0px;
+        opacity: 1;
+      }
+      button:hover {
+        background: #f5c7f7;
+        color: #27296d;
+        cursor: pointer;
+        border: 0px;
+      }
+      .info {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="project">
+      <h1>I love running</h1>
+      <h2>Be active, be healthy, be happy</h2>
+      <hr />
+      <p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/816/original/running.jpg?1653132420"
+          alt="running"
+        />
+        <br />
+        <strong
+          ><em>Running</em> in humans is associated with improved health and
+          life expectancy.</strong
+        ><br />While there exists the potential for injury while
+        <em>running</em> (just as there is in any sport), there are many
+        benefits. Some of these benefits include potential weight loss, improved
+        cardiovascular and respiratory health (reducing the risk of
+        cardiovascular and respiratory diseases), improved cardiovascular
+        fitness, reduced total blood cholesterol, strengthening of bones (and
+        potentially increased bone density), possible strengthening of the
+        immune system and an improved self-esteem and emotional state.
+        <em>Running</em>, like all forms of regular exercise, can effectively
+        slow or reverse the effects of aging.
+        <br />
+        <a href="https://en.wikipedia.org/wiki/Running">Read on Wikipedia </a>
+      </p>
+      <button>Join the community</button>
+      <br />
+      <span class="info">Coded by Iryna Doroshenko</span>
+    </div>
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+      }
+      function addCommunity() {
+        let firstName = prompt("What is your first name?");
+        let age = prompt("How old are you?");
+        if (age >= 16) {
+          alert(`Thanks, ${firstName}, we will be in touch. `);
+        } else {
+          alert(`Sorry ${firstName}, you can't apply to community.`);
+        }
+      }
+
+      let applyButton = document.querySelector("button");
+      applyButton.addEventListener("click", addCommunity);
+    </script>
+  </body>
+</html>
